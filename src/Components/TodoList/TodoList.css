@@ -1,0 +1,13 @@
+.box__form{
+    width: 800px;
+}
+.form__user-phone{
+    border: 8px solid rgb(255, 0, 0);
+    padding: 20px;
+    background-color: #2F303A;
+    color: #ffffff;
+}
+.title{
+    font-size: 38px;
+    text-align: center;
+}
