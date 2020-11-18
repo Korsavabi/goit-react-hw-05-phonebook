@@ -4,10 +4,10 @@
     padding: 10px;
     font-size: 28px;
   }
-  .input-form-enter-active {
+  .input__filterenter-active {
     animation: task 800ms ease-in alternate-reverse;
   }
-  .input-form-exit-active {
+  .input__filter-exit-active {
     animation-duration: 800ms;
     animation-name: hinge;
 }

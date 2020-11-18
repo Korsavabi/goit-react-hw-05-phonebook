@@ -4,9 +4,8 @@ import { CSSTransition } from 'react-transition-group';
 import './SearchForm.css';
 
 const SearchForm = ({ filter, inputHandler }) => {    
-    const [A,setA] = useState(false)
     return (
-            <CSSTransition classNames='input-form' timeout={800} in={!A} mountOnEnter unmountOnExit>
+            <CSSTransition classNames='input__filter' timeout={800}>
                 <input type='text' placeholder="Search" name="filter" value={filter} onChange={inputHandler} className="input__filter" />
             </CSSTransition>
     );
