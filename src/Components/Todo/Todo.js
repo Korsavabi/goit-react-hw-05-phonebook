@@ -1,28 +1,32 @@
 import React from 'react';
-import './Todo.css';
 import PropTypes from "prop-types";
-
-const Todo = ({ deleteTask,contacts }) => {
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import './Todo.css'
+const Todo = ({ deleteTask, contacts }) => {
 
     return (
-        <ul>
-             { 
-             contacts.map((contact) => (
-             <li key={contact.id}>
-        <div>
-            <p className="todo__text">{contact.name}: {contact.number}</p>
+        <>
+            <TransitionGroup component='ul' className="list">
+                {
+                    contacts.map((contact) =>
+                        <CSSTransition key={contact.id} classNames="list__item" timeout={1000}>
+                            <li className='item'>
+                                <div className='list__item-box'>
+                                    <p className="todo__text">{contact.name}: {contact.number}</p>
 
-            <button onClick={ ()=> deleteTask(contact.id)}>DELETE</button>
-        </div>
-        </li>
-         ))
-         }
-        </ul>
+                                    <button onClick={() => deleteTask(contact.id)} className='list__item-box-btn'>DELETE</button>
+                                </div>
+                            </li>
+                        </CSSTransition>
+                    )
+                }
+            </TransitionGroup>
+        </>
     );
 };
 
 export default Todo;
 
-Todo.propTypes ={
+Todo.propTypes = {
     deleteTask: PropTypes.func.isRequired,
 };

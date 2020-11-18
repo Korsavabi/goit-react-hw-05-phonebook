@@ -14,12 +14,16 @@
     "react": "^17.0.1",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.1",
+    "react-loadable": "^5.5.0",
     "react-loader": "^2.4.7",
     "react-loader-spinner": "^3.1.14",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-scroll": "^1.8.1",
     "react-scrollified": "^1.0.52",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.2.1",
+    "styled-transition-group": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
