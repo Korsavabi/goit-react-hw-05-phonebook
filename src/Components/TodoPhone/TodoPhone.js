@@ -108,6 +108,8 @@ const TodoPhone = () => {
     const searchItem = () => {
         return contacts.filter(contact =>
             contact.name.toLowerCase().includes(filter.toLowerCase()));
+            // if (filter.length > 0) {
+		// } else return contacts
     }
 
     return (
@@ -119,7 +121,7 @@ const TodoPhone = () => {
             <Form addTask={addTask} />
             <Section title={'Contacts:'}>
                 {contacts.length > 1 &&<FilterForm getFilter={getFilter} addFilter={addFilter} />}
-                <PhoneItem deleteTask={deleteTask} contacts={filter ? searchItem() : contacts} />
+                <PhoneItem deleteTask={deleteTask} contacts={searchItem().length > 0 ? searchItem() : contacts} />
             </Section>
         </>
     );
